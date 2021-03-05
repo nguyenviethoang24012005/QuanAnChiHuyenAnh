@@ -1,2 +1,2 @@
-const data = '../../assets/data/db.json';
+const data = '../../assets/data/db.js';
 export default data;
