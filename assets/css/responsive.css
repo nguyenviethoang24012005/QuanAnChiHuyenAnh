@@ -1,0 +1,44 @@
+/* for TABLET */
+@media(min-width: 46.8125em) and (max-width: 63.9375em){
+
+}
+
+/* for MOBILE */
+@media(max-width: 46.75em){
+	.header{
+		overflow: hidden;
+	}
+
+	.list__icon{
+		display: inline-block;
+		position: absolute;
+		top: 4px;
+		left: 8px;
+		color: #fff;
+		font-size: 1.8rem;
+	}
+
+	.year{
+		padding: 16px;
+		font-size: 0.9rem;
+		font-weight: bolder;
+	}
+
+	.year__time{
+		display: inherit;
+		margin: -12px 0 -8px;
+		text-align: center;
+	}
+
+
+
+	.goal__coin--year{
+		min-width: 88px;
+		text-align: right;
+	}
+
+	.goal__coin--month{
+		min-width: 74px;
+		text-align: right;
+	}
+}

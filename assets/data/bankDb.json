@@ -1,0 +1,16 @@
+{
+	"bank": [
+		{
+			"id": 1,
+			"name": "mb",
+			"goal": 5000000,
+			"sum": null
+		},
+		{
+			"id": 1,
+			"name": "bidv",
+			"goal": 5000000,
+			"sum": null
+		}
+	]
+}

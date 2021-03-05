@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous");
+
+:root{
+	--headheight: 42px;
+	--bgurl: url(../img/bgr.jpg);
+	--itemWidth: 172px
+}
+*{user-select: none;outline: none}
+body{background: var(--bgurl) no-repeat top / cover}
+ul{list-style: none;display: inline-block}
+
+/*header*/
+.header{
+	font-family: 'Roboto', sans-serif;
+	background: linear-gradient(to right, rgba(0,0,255,.8), rgba(0,0,255,1));
+	height: var(--headheight);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 99;
+}
+
+/*bank info*/
+.header__title{
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+}
+
+.bank__list{
+	height: var(--headheight);
+}
+
+.bank_item{
+	position: relative;
+	font-size: 1.2rem;
+	display: inline-block;
+	width: var(--itemWidth);
+	padding: 3.6px;
+	cursor: pointer;
+}
+
+.bank_item:hover{
+	background: linear-gradient(to right, rgba(0,0,255,.3), rgba(0,0,255,1));
+}
+
+.bank_item:hover > .bank__content{
+	display: block;
+}
+
+.bank__title{
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.bank__content::before{
+	content: "";
+	border: 12px solid;
+	border-color: transparent transparent #FFF transparent;
+	position: absolute;
+	top: -20px;
+	right: 138px;
+}
+
+.bank__content{
+	display: none;
+	font-family: 'Akaya Telivigala', cursive;
+	position: absolute;
+	left: -62px;
+	top: 45px;
+	background: #fff;
+	width: 300px;
+	padding: 0 16px 8px;
+	font-size: 1.2rem;
+	font-weight: bolder;
+	box-shadow: -3px 3px rgba(0, 0, 0, .1);
+	border: 1px solid #BBB;
+	border-radius: 4px;
+
+}
+
+.bank__content::after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 12px;
+	top: -12px;
+	right: 0;
+}
+
+.bank__content--title{
+	font-size: 1.6rem;
+	text-align: center;
+	line-height: var(--headheight);
+}
+
+/*btn*/
+.control__btn{
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: bolder;
+	text-align: center;
+	height: var(--headheight);
+	line-height: var(--headheight);
+	border: 1px solid rgba(255,0,255,1);
+	border-radius: 15px;
+	padding: 2px 8px 4px;
+	background: linear-gradient(to right top, rgba(255,0,255,.2), rgba(255,0,255,1));
+}
+
+.control__btn:hover{
+	background: linear-gradient(to right top, rgba(255,0,255,1), rgba(255,0,255,.2));
+
+}
+
+/*content*/
+.content{
+	font-family: 'Akaya Telivigala', cursive;
+	margin-top: calc(var(--headheight) + 16px);
+}
+
+.bank__content--coin{
+	display: flex;
+	justify-content: space-between;
+}
+
+/*year*/
+.years{
+	background: #F2F2F2;
+	border: 1px solid #15E43C;
+	padding: 8px;
+	margin-top: 4px;
+}
+
+.year{
+	background: #FFF;
+	padding: 8px;
+	box-shadow: -1px 1px rgba(0, 0, 0, .2);
+}
+
+.year__time{
+	height: 100%;
+	line-height: 90px;
+	font-weight: bolder;
+}
+
+.year__goal{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+/*month*/
+.months{
+	margin: 8px;
+	padding-bottom: 16px;
+}
+
+.month{
+	background: #fff;
+	border-radius: 5px;
+	padding: 8px;
+	margin-top: 12px;
+	box-shadow: -1px 1px rgba(0, 0, 0, .2);
+}
+
+.month:hover{
+	transition: transform ease .2s, box-shadow ease .2s;
+	transform: translateX(4px);
+	box-shadow: -4px 4px rgba(0, 0, 0, .2);
+
+}
+
+.month__title{text-align: center}
+
+.month__content{
+	margin-top: 4px;
+	padding: 4px;
+}
+
+.month__coin{
+	display: flex;
+	justify-content: space-between; 
+}
