@@ -1,11 +1,27 @@
-// import render from './modules/coin.js';
-import { GET } from './modules/methods.js';
-import render from './modules/render.js';
+let menuBtn = document.querySelector('#menuBtn');
+let sideNav = document.querySelector('#sideNav');
+let menu = document.querySelector('#menu');
 
-function start(){
-	// GET(data => console.log(data));
-	// GET(course => render(course));
-	GET(render);
+let state = {
+	true: {
+		size: '0',
+		img: './assets/img/close.png'
+	},
+	false: {
+		size: '-250px',
+		img: './assets/img/menu.png'
+	}
 }
 
-start();
+sideNav.style.right = state[false].size;
+
+
+menuBtn.onclick = e => {
+	let stateBtn =
+	sideNav.style.right == state[false].size ?
+	true :
+	false;
+
+	sideNav.style.right = state[stateBtn].size;
+	menu.src = state[stateBtn].img;
+}
